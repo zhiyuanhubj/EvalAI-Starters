@@ -19,7 +19,7 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["Win Rate", "Judgement", "Reasoning", "Total"],
+        "labels": ["Win Rate", "Judgement", "Reasoning", "Deception" ,"Total"],
         "default_order_by": "Total",
         "metadata": {
           "Win Rate": {
@@ -31,6 +31,10 @@ leaderboard:
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           },
           "Judgement": {
+          "sort_ascending": True,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          },
+          "Deception": {
           "sort_ascending": True,
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           }

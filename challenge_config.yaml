@@ -19,14 +19,14 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["Metric1", "Metric2", "Metric3", "Total"],
+        "labels": ["Win Rate", "Judgement", "Reasoning", "Total"],
         "default_order_by": "Total",
         "metadata": {
-          "Metric1": {
+          "Win Rate": {
             "sort_ascending": True,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           },
-          "Metric2": {
+          "Judgement": {
             "sort_ascending": True,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           }

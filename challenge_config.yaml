@@ -29,6 +29,10 @@ leaderboard:
           "Judgement": {
             "sort_ascending": True,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          },
+          "Judgement": {
+          "sort_ascending": True,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           }
         }
       }

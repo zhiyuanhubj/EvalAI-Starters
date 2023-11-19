@@ -1,6 +1,6 @@
 # If you are not sure what all these fields mean, please refer our documentation here:
 # https://evalai.readthedocs.io/en/latest/configuration.html
-title: MAgIC: Investigation of Large Language Model Powered Multi-Agent 
+title: MAgIC Investigation of Large Language Model Powered Multi-Agent 
 short_description: Assess the LLMs' capabilities in multi agent settings.
 description: templates/description.html
 evaluation_details: templates/evaluation_details.html

@@ -18,20 +18,45 @@ published: True
 leaderboard:
   - id: 1
     schema:
-      {
-        "labels": ["Metric1", "Metric2", "Metric3", "Total"],
-        "default_order_by": "Total",
-        "metadata": {
-          "Metric1": {
-            "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          },
-          "Metric2": {
-            "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          }
+    {
+      "labels": ["Win Rate", "Judgement", "Reasoning", "Deception", "Self-Awareness", "Cooperation", "Coordination", "Rationality", "Total"],
+      "default_order_by": "Total",
+      "metadata": {
+        "Win Rate": {
+          "sort_ascending": False,
+          "description": "Win Rate is a straightforward indicator of success, fundamental for determining the effectiveness of the system. It is calculated as the average number of wins across scenarios."
+        },
+        "Judgement": {
+          "sort_ascending": True,
+          "description": "Judgement, the ratio of correct votes, represents the accuracy of an agent’s judgment. It's essential for assessing their ability to distinguish roles based on partial information."
+        },
+        "Reasoning": {
+          "sort_ascending": True,
+          "description": "Reasoning reflects the agents' ability to logically reason the global status with partial information. It's calculated as the proportion of correct role analyses."
+        },
+        "Deception": {
+          "sort_ascending": True,
+          "description": "Deception evaluates an agent's capability to deceive others by blending in or causing incorrect guesses. It's crucial in competitive settings."
+        },
+        "Self-Awareness": {
+          "sort_ascending": True,
+          "description": "Self-Awareness measures correct role identification, critical for agents to function within their capabilities and indicative of their level of self-awareness."
+        },
+        "Cooperation": {
+          "sort_ascending": True,
+          "description": "Cooperation quantifies how well agents work together, showcasing the collective efficacy of the system, especially in cost-sharing games and prisoner’s dilemma."
+        },
+        "Coordination": {
+          "sort_ascending": True,
+          "description": "Coordination is the ratio of successful collaborations proposed by the challenger LLM, reflecting the ability to work effectively with others."
+        },
+        "Rationality": {
+          "sort_ascending": True,
+          "description": "Rationality captures the agents' ability to act consistently and efficiently based on logic and evidence, particularly in prisoner's dilemma and public good games."
         }
       }
+    }
+
 
 challenge_phases:
   - id: 1

@@ -19,7 +19,7 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["Win Rate", "Judgement", "Reasoning", "Deception" ,"Total"],
+        "labels": ["Win Rate", "Judgement", "Reasoning", "Deception", "Self-Awareness", "Cooperation", "Coordination", "Rationality" ,"Total"],
         "default_order_by": "Total",
         "metadata": {
           "Win Rate": {
@@ -35,6 +35,22 @@ leaderboard:
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           },
           "Deception": {
+          "sort_ascending": True,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          },
+          "Self-Awareness": {
+          "sort_ascending": True,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          },
+          "Cooperation": {
+          "sort_ascending": True,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          },
+          "Coordination": {
+          "sort_ascending": True,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          },
+          "Rationality": {
           "sort_ascending": True,
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           }

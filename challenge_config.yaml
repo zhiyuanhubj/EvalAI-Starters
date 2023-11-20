@@ -7,7 +7,7 @@ evaluation_details: templates/evaluation_details.html
 terms_and_conditions: templates/terms_and_conditions.html
 image: 52621700410444_.pic_hd.jpg
 submission_guidelines: templates/submission_guidelines.html
-leaderboard_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas a libero nec sagittis.
+leaderboard_description: The current performance of different LLM-powered multi-agent system is demostrated here.
 evaluation_script: evaluation_script.zip
 remote_evaluation: False
 is_docker_based: False

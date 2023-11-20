@@ -1,37 +1,41 @@
-<p> 1 Win Rate is a straightforward indicator of success and is fundamental for determining the effectiveness of the system.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathematical Formulas in Multi-Agent System Evaluation</title>
+    <!-- 引入 MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>1 Win Rate is a straightforward indicator of success and is fundamental for determining the effectiveness of the system.</p>
+    <p>\[\frac{1}{|\mathcal{S}|}\sum_{s_i\in\mathcal{S}}w_{s_i}\]</p>
 
-$$\frac{1}{|\mathcal{S}|}\sum_{s_i\in\mathcal{S}}w_{s_i}$$
+    <p>2 Judgement, the ratio of correct votes represents the accuracy of an agent’s judgment, essential for assessing their ability to distinguish the role of others based on the partial information provided by other players.</p>
+    <p>\[S_{J} = \frac{n_{cv}}{n_v}\]</p>
+    <p>where \(n_{cv}\) is the number of correct votes when the challenger LLM are playing civilians and non-chameleons, and \(n_v\) is the total number of votes when the challenger LLM is playing chameleons and non-chameleons game.</p>
 
-2 Judgement, the ratio of correct votes represents the accuracy of an agent’s judgment, essential for assessing their ability to distinguish the role of others based on the partial information provided by other players.
+    <p>3 Reasoning, the proportion of correct role analyses reflects the agents' ability to logically reason the global status when partially given the information.</p>
+    <p>\[S_{R} = \frac{n_{\text{c\_gold}} + n_{\text{c\_inter}}}{n_{\text{gold}} + n_{\text{inter}}}\]</p>
 
-$$S_{J} = n_{cv} / n_v$$
-where $n_{cv}$ is the number of correct votes when the challenger LLM are playing civilians and non-chameleons, and $n_v$ is the total number of votes when the challenger LLM is playing chameleons and non-chameleons game
+    <p>4 Deception, this metric evaluates an agent's capability to successfully deceive others.</p>
+    <p>\[S_{D} = \frac{n_{\text{wuc}}}{n_{\text{uc}}} + \lambda \frac{n_{\text{wcg}}}{n_{\text{cg}}}\]</p>
 
-3 Reasoning, the proportion of correct role analyses reflects the agents' ability to logically reason the global status when partially given the information. We let each player analyze other players' roles and think a step further about other players' analysis. We compare these analyses with the gold situation and the subjective analysis of others to decide whether the analysis is right or not. We denote number of these two analysis as $n_{\text{gold}}$ and $n_{\text{inter}}$ and the correct number portion as  $n_{\text{c\_gold}}$ and $n_{\text{c\_inter}}$.
+    <p>5 Self-Awareness, correct role identification is critical for agents.</p>
+    <p>\[S_{\text{self}} = \frac{n_{\text{cr}}}{n_{\text{rt}}}\]</p>
 
-$$S_{R} = \frac{n_{\text{c\_gold}} + n_{\text{c\_inter}}} {n_{\text{gold}} + n_{\text{inter}}}$$
+    <p>6 Cooperation. The success in cost-sharing games and prisoner’s dilemma quantify how well agents work together.</p>
+    <p>\[S_{\text{collab}} = \frac{n_{\text{wcs}}}{n_{\text{cs}}}\]</p>
 
-4 Deception, this metric evaluates an agent's capability to successfully deceive others by blending in as a chameleon/undercover or causing incorrect code guesses, which is crucial in competitive settings.
+    <p>7 Coordination. The ratio of successful collaborations proposed by the challenger LLM.</p>
+    <p>\[S_{\text{coord}} = \frac{n_{\text{pcs}}}{n_{\text{wcs}}}\]</p>
 
-$$S_{D} = \frac{n_{\text{wuc}}}{n_{\text{uc}}} + \lambda \frac{n_{\text{wcg}}}{n_{\text{cg}}}$$
-where $n_{\text{wuc}}$ is the number of wins as chameleon and undercover, $nn_{\text{uc}}$ is the total number of competitions as chameleon and undercover, $n_{\text{wcg}}$ is the number of incorrect code guesses, and $n_{\text{cg}}$ is the total number of code guesses. Here we assign $\lambda=0.25$.
-
-5 Self-Awareness, correct role identification is critical for agents to function within their capabilities and is indicative of their level of self-awareness, affecting their collaboration effectiveness.
-
-$$S_{\text{self}} = n_{\text{cr}} / n_{\text{rt}}$$
-where $n_{\text{cr}}$ is the number of correct role identifications, and $n_{\text{rt}}$ is the total number of role identifications.
-
-6 Cooperation. The success in cost-sharing games and prisoner’s dilemma quantify how well agents work together, showcasing the collective efficacy of the system.
-
-$$S_{\text{collab}} = \frac{n_{\text{wcs}}}{n_{\text{cs}}} $$
-where $n_{\text{wcs}}$ is the number of successful cost-sharing games, $n_{\text{cs}}$ is the total number of cost-sharing games.
-
-7 Coordination. The ratio of successful collaborations which is proposed by the challenger LLM.
-
-$$S_{\text{coord}} = \frac{n_{\text{\text{pcs}}}}{n_{\text{wcs}}}$$
-where $n_{\text{pcs}}$ is the number of successful collaborations proposed by the challenger LLM in the cost-sharing games.
-
-8 Rationality. By measuring decisions in prisoner's dilemma situations and public good games, this metric captures the agents' ability to act consistently and efficiently based on logic and evidence. Suppose there are $\mathcal{T}_{\text{pd}}$,  $\mathcal{T}_{\text{pg}}$ rounds in each competition for Prisoner's Dilemma and Public Good. The Rationality is defined as:
-
-$$S_{R} = \frac{n_b}{n_{\text{pd}}*\mathcal{T}_{\text{pd}}} + \frac{n_{\text{li}}}{n_{\text{pg}}*\mathcal{T}_{\text{pg}}}$$
-where $n_b$ is the number of betray decisions, $n_{\text{pd}}$ is the number of prisoner's dilemma competitions, $n_{\text{li}}$ is the number decision where the challenger LLM contribute the least in the common pool, $n_{\text{pg}}$ is the number of public good competitions.</p>
+    <p>8 Rationality. By measuring decisions in prisoner's dilemma situations and public good games.</p>
+    <p>\[S_{R} = \frac{n_b}{n_{\text{pd}}*\mathcal{T}_{\text{pd}}} + \frac{n_{\text{li}}}{n_{\text{pg}}*\mathcal{T}_{\text{pg}}}\]</p>
+</body>
+</html>
